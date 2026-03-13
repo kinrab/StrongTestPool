@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestMaxActiveStrong" time="159.401" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="D:\REPO_JAVA\FinalTest\StrongTestPool\target\test-classes;D:\REPO_JAVA\FinalTest\StrongTestPool\target\classes;C:\Users\Никита\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Никита\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Никита\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Никита\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Никита\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Никита\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Никита\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-junit5\2.24.0\allure-junit5-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-junit-platform\2.24.0\allure-junit-platform-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-java-commons\2.24.0\allure-java-commons-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-model\2.24.0\allure-model-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-test-filter\2.24.0\allure-test-filter-2.24.0.jar;C:\Users\Никита\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.2\junit-platform-launcher-1.9.2.jar;C:\Users\Никита\.m2\repository\org\slf4j\slf4j-simple\2.0.13\slf4j-simple-2.0.13.jar;C:\Users\Никита\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
+    <property name="sun.java.command" value="C:\Users\Никита\AppData\Local\Temp\surefire14831757208896794389\surefirebooter-20260313113212658_3.jar C:\Users\Никита\AppData\Local\Temp\surefire14831757208896794389 2026-03-13T11-32-12_477-jvmRun1 surefire-20260313113212658_1tmp surefire_0-20260313113212658_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\REPO_JAVA\FinalTest\StrongTestPool\target\test-classes;D:\REPO_JAVA\FinalTest\StrongTestPool\target\classes;C:\Users\Никита\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Никита\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Никита\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Никита\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Никита\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Никита\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Никита\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-junit5\2.24.0\allure-junit5-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-junit-platform\2.24.0\allure-junit-platform-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-java-commons\2.24.0\allure-java-commons-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-model\2.24.0\allure-model-2.24.0.jar;C:\Users\Никита\.m2\repository\io\qameta\allure\allure-test-filter\2.24.0\allure-test-filter-2.24.0.jar;C:\Users\Никита\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.2\junit-platform-launcher-1.9.2.jar;C:\Users\Никита\.m2\repository\org\slf4j\slf4j-simple\2.0.13\slf4j-simple-2.0.13.jar;C:\Users\Никита\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Никита"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Apache NetBeans\jdk"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\REPO_JAVA\FinalTest\StrongTestPool"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Никита\AppData\Local\Temp\surefire14831757208896794389\surefirebooter-20260313113212658_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.2+10-LTS"/>
+    <property name="user.name" value="Никита"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-25.0.2+10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\Apache NetBeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\Никита\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\843E~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="D:\REPO_JAVA\FinalTest\StrongTestPool"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Oracle\dbhomeXE\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk-25\bin;C:\Users\Никита\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\Никита\AppData\Local\Programs\Python\Python314\;C:\Users\Никита\AppData\Local\Microsoft\WindowsApps;C:\Users\Никита\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2025.2.5\bin;C:\TOOLS;C:\ProgramFiles\Git\bin;C:\TOOLS\allure\bin;;C:\Program Files\Apache NetBeans\bin\;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="25.0.2+10-LTS"/>
+    <property name="stdin.encoding" value="Cp1251"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testPostgresPool(TestConfig)[1]" classname="TestMaxActiveStrong" time="21.358">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 1
+  Conditions: Normal Wait   All: 4  MaxAct:2  OK:4 Fast:2 Delay:2 Error:0 MaxWait:  10000 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 2, maxWaitMillis = 10000
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:32:28 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:32:28 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:32:33 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:32:33 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):2
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 11 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 10000 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 10000 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 11 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 10000 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 10000 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3.0: SUCCESS
+ASSERT 7.3.1: SUCCESS
+ASSERT 7.3.2: SUCCESS
+ASSERT 7.3.3: SUCCESS
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testPostgresPool(TestConfig)[2]" classname="TestMaxActiveStrong" time="15.292">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 2
+  Conditions: Timeout Fail  All: 4  MaxAct:2  Ok:2 Fast:2 Delay:0 Error:2 MaxWait:   3000 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 2, maxWaitMillis = 3000
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:32:47 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:32:47 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:32:49 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:32:49 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):2
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 4 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 3000 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 3000 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 3000 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 4 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 3000 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3.0: SUCCESS
+ASSERT 7.3.1: SUCCESS
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testPostgresPool(TestConfig)[3]" classname="TestMaxActiveStrong" time="30.104">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 3
+  Conditions: Stairway      All: 4  MaxAct:1  OK:4 Fast:1 Delay:3 Error:0 MaxWait:  30000 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 1, maxWaitMillis = 30000
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:04 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:09 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:14 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [1] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:19 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):1
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 11 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 30000 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 21 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 30000 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 30000 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 30000 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3.0: SUCCESS
+ASSERT 7.3.1: SUCCESS
+ASSERT 7.3.2: SUCCESS
+ASSERT 7.3.3: SUCCESS
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testPostgresPool(TestConfig)[4]" classname="TestMaxActiveStrong" time="15.265">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 4
+  Conditions: Fast timeout  All: 4  MaxAct:2  OK:2 Fast:2 Delay:0 Error:2 MaxWait:    100 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 2, maxWaitMillis = 100
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:33:29 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:33:29 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:34 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:34 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):2
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 1 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 100 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 100 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 1 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 100 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 100 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3.0: SUCCESS
+ASSERT 7.3.1: SUCCESS
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testPostgresPool(TestConfig)[5]" classname="TestMaxActiveStrong" time="15.398">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 5
+  Conditions: Wide gateway  All: 4  MaxAct:10 OK:4 Fast:4 Delay:0 Error:0 MaxWait: 100000 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 10, maxWaitMillis = 100000
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [4] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:50 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:50 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:50 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:33:50 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):4
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 100000 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 100000 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 100000 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 100000 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3.0: SUCCESS
+ASSERT 7.3.1: SUCCESS
+ASSERT 7.3.2: SUCCESS
+ASSERT 7.3.3: SUCCESS
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testPostgresPool(TestConfig)[6]" classname="TestMaxActiveStrong" time="25.284">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 6
+  Conditions: Stairway 10   All:10  MaxAct:2  OK:6 Fast:2 Delay:4 Error:4 MaxWait:  14000 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 2, maxWaitMillis = 14000
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 9
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:05 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 7
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:05 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:10 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:10 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:14 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 8
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:14 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 10
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:14 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 6
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:14 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 5
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:15 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:15 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):2
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 15 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 14000 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 11 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 14000 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 11 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 14000 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 14000 | Sleep: 5000 
+Request #5 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 14000 | Sleep: 5000 
+Request #6 | Start on 0 sec | Duration 15 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 14000 | Sleep: 5000 
+Request #7 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 14000 | Sleep: 5000 
+Request #8 | Start on 0 sec | Duration 15 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 14000 | Sleep: 5000 
+Request #9 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 14000 | Sleep: 5000 
+Request #10 | Start on 0 sec | Duration 15 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 14000 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3.0: SUCCESS
+ASSERT 7.3.1: SUCCESS
+ASSERT 7.3.2: SUCCESS
+ASSERT 7.3.3: SUCCESS
+ASSERT 7.3.4: SUCCESS
+ASSERT 7.3.5: SUCCESS
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testPostgresPool(TestConfig)[7]" classname="TestMaxActiveStrong" time="25.208">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 7
+  Conditions: Border 10     All:10  MaxAct:2  OK:6 Fast:2 Delay:4 Error:4 MaxWait:  15000 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 2, maxWaitMillis = 15000
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 7
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:30 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 10
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:30 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:35 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 8
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:35 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:40 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 5
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:40 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 6
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:40 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:40 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Active connections [2] in: Catalina:type=DataSource,host=localhost,context=/MyServletProject,class=javax.sql.DataSource,name="jdbc/postgres-pool"
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:40 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 9
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<ul>
+<li>Name: Terayon</li>
+<li>Name: InternetTelecom</li>
+</ul>
+<br><br><p>Current time: Fri Mar 13 11:34:40 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):2
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 15000 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 15000 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 15000 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 11 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 15000 | Sleep: 5000 
+Request #5 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 15000 | Sleep: 5000 
+Request #6 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 15000 | Sleep: 5000 
+Request #7 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 15000 | Sleep: 5000 
+Request #8 | Start on 0 sec | Duration 11 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 15000 | Sleep: 5000 
+Request #9 | Start on 0 sec | Duration 16 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 15000 | Sleep: 5000 
+Request #10 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 15000 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3.0: SUCCESS
+ASSERT 7.3.1: SUCCESS
+ASSERT 7.3.2: SUCCESS
+ASSERT 7.3.3: SUCCESS
+ASSERT 7.3.4: SUCCESS
+ASSERT 7.3.5: SUCCESS
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+  <testcase name="testPostgresPool(TestConfig)[8]" classname="TestMaxActiveStrong" time="11.164">
+    <system-out><![CDATA[
+*******************************************************************************************************
+
+  Run test #: 8
+  Conditions: Nothing       All:10  MaxAct:0  OK:0 Fast:10 Delay:0 Error:10 MaxWait: 1000 Sleep:5000  .
+
+*******************************************************************************************************
+
+>>> Start of test... Run requests to servlet...
+>>> [CLEANUP] Direstories work and temp were cleaned.
+>>> [CONFIG] Read context.xml: D:\REPO_JAVA\FinalTest\tomcat\conf\context.xml
+>>> [CONFIG] Parameters updated: maxTotal = 0, maxWaitMillis = 1000
+>>> [CLEANUP] Force closing Tomcat windows...
+>>> [CLEANUP] Done. Starting fresh Tomcat...
+>>> [CONFIG] Current User Dir: D:\REPO_JAVA\FinalTest\StrongTestPool
+>>> [CONFIG] Target Tomcat Bin: D:\REPO_JAVA\FinalTest\tomcat\bin
+>>> TomCat started with JMX on port 9000
+TomCat has been started successfully.
+
+MONITOR MBean: Monitor MBean has been started.
+Monitor DB: Initialisation start...
+
+MONITOR DB Initialisaion phase.
+Monitor DB: Initialisation is finished.
+
+>>> Test run (Time start: 0s)
+>>> [MONITOR MBEAN] Connected to JMX. Starting scan...
+
+[HTTP RESPONSE DEBUG] Request ID: 1
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 8
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 4
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 7
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 2
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 6
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 5
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 3
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 10
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:51 MSK 2026</p>
+</body></html>
+
+----------------------
+
+[HTTP RESPONSE DEBUG] Request ID: 9
+Status Code: 200
+Body: <html><head><title>User List</title></head><body>
+<h1>Hi, Bro! This is servlet. I am running...</h1><br><br>
+<p style='color:red;'>SQL query execution error.. Try again later.</p>
+<br><br><p>Current time: Fri Mar 13 11:34:52 MSK 2026</p>
+</body></html>
+
+----------------------
+>>> [MONITOR MBEAN] Thread stopped.
+MONITOR MBean: monitor MBean has been stopped.
+MONITOR MBean: Peak of connections (numActive):0
+Stop Tomcat...
+TomCat: TomCat has been stopped.
+
+
+Monitor DB: Finalisation start...
+MONITOR DB final phase.
+Monitor DB: Monitor DB is finished.
+
+
+======= Detail report =======
+Request #1 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #2 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #3 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #4 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #5 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #6 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #7 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #8 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #9 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+Request #10 | Start on 0 sec | Duration 2 sec | StatusHttp: 200 | TimeoutError: 1 | MaxWait: 1000 | Sleep: 5000 
+
+======= ASSERT CHECKING FILTER #1: (ODINARY CHECK)=======
+ASSERT 7.1: SUCCESS
+ASSERT 7.2: SUCCESS
+ASSERT 7.3: SUCCCESS. (only negative results expected)
+======= ASSERT CHECKING FILTER #1: END. =======================
+
+======= ASSERT CHECKING FILTER #2: (TOMCAT MBEAN CHECK)=======
+ASSERT 8.0: SUCCESS
+ASSERT 8.1: SUCCESS
+======= ASSERT CHECKING FILTER #2: END. =======================
+
+======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======
+ MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.
+======= ASSERT CHECKING FILTER #3: END. =======================
+
+============ All steps have been completed. Wow! :-) ==================
+
+]]></system-out>
+  </testcase>
+</testsuite>
