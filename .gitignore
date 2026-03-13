@@ -1,6 +1,25 @@
+# Игнорируем всю папку сборки Maven (включая аллюры)
+target/
+
+# Игнорируем временный мусор Tomcat
+tomcat/work/
+tomcat/temp/
+tomcat/logs/
+
+# Игнорируем специфичные настройки NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Служебные файлы Windows
+Thumbs.db
+desktop.ini
+
 # Compiled class file
 *.class
-target/
+
 # Log file
 *.log
 
