@@ -1,1 +1,0 @@
-Request #3 | Start on 0 sec | Duration 6 sec | StatusHttp: 200 | TimeoutError: 0 | MaxWait: 3000 | Sleep: 5000 
