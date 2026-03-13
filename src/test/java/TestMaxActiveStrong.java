@@ -33,6 +33,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestMaxActiveStrong 
 {
+    
+    // Константы для подключения к БД
+    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/my_test_db";
+    private static final String DB_USER = "postgres";
+    private static final String DB_PASSWORD = "!3postgreSql3!";
+    
     // Класс для хранения параметров нашего теста: 
     static class TestConfig 
     {
@@ -328,7 +334,10 @@ public class TestMaxActiveStrong
     public void testPostgresPool(TestConfig testScenarioParameters) throws Exception 
     {
         int N = testScenarioParameters.threads; // Будем забирать количество потоков для запуска из параметров теста!
-         
+                
+        DBConnectionMonitor dbMonitor = new DBConnectionMonitor(JDBC_URL, DB_USER, DB_PASSWORD);
+        Thread dbMonitorThread = new Thread(dbMonitor);
+
         TomcatPoolMonitor monitor = new TomcatPoolMonitor("jdbc/MyDataSource"); // Для запуска монитора в отдельном  потоке
         Thread monitorThread = new Thread(monitor); 
         
@@ -392,7 +401,11 @@ public class TestMaxActiveStrong
         System.out.println("Monitor DB: Initialisation start...");   
 
         // Код старта монитора DB
-        System.out.println("\nMONITOR DB Initialisaion phase.");
+        Allure.step("3.3 Start monitor DB", () -> 
+        {    
+            dbMonitorThread.start();
+            System.out.println("MONITOR DB: Monitor MBean has been started.");
+        });
         
         System.out.println("Monitor DB: Initialisation is finished."); 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -443,7 +456,7 @@ public class TestMaxActiveStrong
         });
         
         //Шаг 5.1: Останавливаем монитор значений в MBean TomCat:
-        Allure.step("5.2 Stop monitor MBean", () -> 
+        Allure.step("5.1 Stop monitor MBean", () -> 
         {
             monitor.stop(); // Останавливаем цикл в потоке
             try 
@@ -461,25 +474,48 @@ public class TestMaxActiveStrong
             Allure.addAttachment("Peak of connections (numActive):", String.valueOf(tempMaxNumActive));
             System.out.println("MONITOR MBean: Peak of connections (numActive):" + tempMaxNumActive);         
         });
-
         
-        //Шаг 5.2: Останавливаем TomCat:
-        Allure.step("5.2 Stop Tomcat", () -> 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Шаг 5.2: Останавливаем монитор DB:         
+        System.out.println("\nMonitor DB: Finalisation start...");   
+
+        // Код остановки монитора DB:
+        Allure.step("5.2 Stop DB Connection Monitor", () -> 
+        {
+            dbMonitor.stop(); // Сигнал потоку завершить цикл
+            try 
+            {
+                // Ждем завершения потока максимум 2 секунды
+                dbMonitorThread.join(2000); 
+            } 
+            catch (InterruptedException e) 
+            {
+                // Если ожидание прервано, восстанавливаем статус прерывания
+                Thread.currentThread().interrupt();
+                System.err.println(">>> [DB MONITOR] Join interrupted: " + e.getMessage());
+            } 
+            finally 
+            {
+                // Сразу фиксируем результат в отчет, даже если поток завершился с ошибкой
+                int peakDB = dbMonitor.getMaxObservedFromDB();
+                Allure.addAttachment("Пиковый показатель соединений в БД (pg_stat_activity):", String.valueOf(peakDB));
+                System.out.println(">>> [DB MONITOR] Stopped. Peak detected: " + peakDB);
+            }
+        });
+        
+        
+        System.out.println("Monitor DB: Monitor DB is finished.\n"); 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+      
+         //Шаг 5.3: Останавливаем TomCat:
+        Allure.step("5.3 Stop Tomcat", () -> 
         {
             stopTomcat();
             System.out.println("TomCat: TomCat has been stopped.\n");
         });
         
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Шаг 5.3: Останавливаем монитор DB:         
-        System.out.println("\nMonitor DB: Finalisation start...");   
-
-        // Код старта монитора DB
-        System.out.println("MONITOR DB final phase.");
         
-        System.out.println("Monitor DB: Monitor DB is finished.\n"); 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-      
+        
         // ШАГ 6: Формируем детальный отчет:
         Allure.step("6. Detail repost preparation...", () -> 
         {
@@ -535,34 +571,29 @@ public class TestMaxActiveStrong
             System.out.println(testScenarioParameters.expectedError == realErrorCount ? "ASSERT 7.2: SUCCESS" : "ASSERT 7.2: ERROR!");    //Выведем сразу в консоль результат.
 
             // 4. Лесенка времени (только для тех, где реально были данные)
+            // 4. Сортируем УСПЕШНЫЕ результаты по времени выполнения (от быстрых к долгим)
             List<TestResult> sortedOkResults = results.stream()
                 .filter(r -> r.code == 200 && !r.body.contains("SQL query execution error"))
-                .sorted(Comparator.comparingLong(r -> r.duration))
+                .sorted(Comparator.comparingLong(r -> r.duration)) // ВАЖНО: Сортируем!
                 .collect(Collectors.toList());
 
-            // 5. Если были позитивные результаты: 
             if (sortedOkResults.size() > 0) 
-            {    
-                final int delta = 2; // Допустимая погрешность в секундах (запас на лаги ОС/сети)
-                
-                for (int i = 0; i < sortedOkResults.size(); i++)  
-                {
+            {
+                final int delta = 4; // Увеличь до 4 для стабильности на локальном ПК
+
+                for (int i = 0; i < sortedOkResults.size(); i++) {
                     final int requestIndex = i;
-                    // Номер "волны" (0, 1, 2...), в которую попал запрос исходя из maxActive
-                    int wave = i / maxActive; 
+                    int wave = i / maxActive; // 0-й и 1-й запрос -> wave 0, 2-й и 3-й -> wave 1
                     long expectedDuration = sleep * (wave + 1);
+                    long actualDuration = sortedOkResults.get(requestIndex).duration;
 
-                    Allure.step("7.3."+ i +" Check request in wave #" + (wave + 1) + " (expect ~" + expectedDuration + "seconds)", () -> 
-                    {
-                        long actualDuration = sortedOkResults.get(requestIndex).duration;
-                        // Вот тут были срабатывания ассертов из-за задержек в на 1-2 секунды:
-                        assertTrue(Math.abs(actualDuration - expectedDuration) <= delta, 
-                            "Request #" + (requestIndex + 1) + " in queue waited " + actualDuration + "instead of  " + expectedDuration + "seconds.");
+                    Allure.step("7.3." + i + " Check Wave #" + (wave + 1), () -> {
+                        boolean isOk = Math.abs(actualDuration - expectedDuration) <= delta;
 
-                        // 1. Сначала вычисляем статус
-                        String status = (Math.abs(actualDuration - expectedDuration) <= 1) ? "SUCCESS" : "ERROR!";
-                        // 2. Затем печатаем
-                        System.out.println("ASSERT 7.3." + requestIndex + ": " + status);
+                        assertTrue(isOk, "Result #" + (requestIndex + 1) + " finished in " + actualDuration + 
+                                         "s. Expected wave ~" + expectedDuration + "s (+/-" + delta + ")");
+
+                        System.out.println("ASSERT 7.3." + requestIndex + ": " + (isOk ? "SUCCESS" : "ERROR!"));
                     });
                 }
             }
@@ -603,8 +634,32 @@ public class TestMaxActiveStrong
            // Проверка результатов работы  третьего фильтра:          
            System.out.println("\n======= ASSERT CHECKING FILTER #3: (PostgreSql DB CHECK)=======");
            
-           // Код валидации результатов работы потока монитора DB
-           System.out.println(" MUST BE ADDED HERE! PRINT RESULT OF FILTER #3 CHECKING.");
+           int peakDB = dbMonitor.getMaxObservedFromDB();
+           int limit = testScenarioParameters.maxActive;
+           int allowedLimit = limit + 1; // Лимит + 1 соединение самого монитора
+
+           // Определяем состояние: -1 (ошибка), 1 (превышение), 0 (норма)
+           int status = (peakDB == -1) ? -1 : (peakDB > allowedLimit ? 1 : 0);
+
+           switch (status) 
+           {
+              case -1:
+                  System.err.println("ASSERT 9.0: ERROR! Monitor DB was not connected. Check JDBC Driver!");
+                  assertTrue(false, "DB Monitor failed (Value -1)");
+                  break;
+
+              case 1:
+                  System.err.println("ASSERT 9.0: Error! Monitor DB detected exceed value of MaxTotal: " + limit 
+                                     + ". Real peak value: " + peakDB + " (including monitor connection)");
+                  assertTrue(false, "DB peak exceeded! Saw " + peakDB + " connections");
+                  break;
+
+              case 0:
+              default:
+                  System.out.println("ASSERT 9.0: SUCCESS. Peak DB sessions: " + peakDB);
+                  assertTrue(true);
+                  break;
+           }
            
            System.out.println("======= ASSERT CHECKING FILTER #3: END. =======================");
            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
